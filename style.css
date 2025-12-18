@@ -268,7 +268,7 @@ nav {
 
 .edu-card:hover, .award-card:hover { transform: translateY(-5px); border-color: var(--accent); }
 .card-logo-box, .award-icon { width: 80px; height: 80px; background: #1e293b; border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.school-logo { max-width: 60%; height: auto; filter: grayscale(1) invert(1); }
+.school-logo { max-width: 60%; height: auto; }
 .award-icon { font-size: 2rem; background: rgba(59, 130, 246, 0.1); border: 1px solid var(--accent); }
 .edu-card h3, .award-card h3 { font-size: 1.3rem; margin-bottom: 5px; color: var(--text); }
 .institution { color: var(--accent); font-weight: 700; font-size: 0.95rem; margin-bottom: 10px; }
