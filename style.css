@@ -471,3 +471,67 @@ footer { padding: 80px 0; border-top: 1px solid var(--border); text-align: cente
     }
 }
 
+/* --- RESUME PAGE SPECIFIC STYLING --- */
+
+/* Professional Hero CTA */
+.header-cta {
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 14px 32px;
+    border-radius: 99px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Resume Viewer Layout */
+.resume-viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0 80px;
+}
+
+.resume-page {
+    width: 100%;
+    max-width: 850px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.resume-page img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ensure consistent nav active state */
+.nav-links a.active {
+    color: var(--accent) !important;
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+    .resume-viewer {
+        gap: 20px;
+    }
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+}
