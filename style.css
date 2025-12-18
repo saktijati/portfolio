@@ -124,7 +124,7 @@ nav {
 /* Fix for stretched images */
 .card-img-container { 
     position: relative;
-    height: 100px; 
+    height: 200px; 
     width: 100%; 
     overflow: hidden; 
     background: #111827;
