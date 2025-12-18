@@ -18,6 +18,12 @@ body {
     overflow-x: hidden; /* Prevents unwanted side-scrolling */
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 /* NAV STYLING - Handles the new flex structure with Socials */
@@ -31,12 +37,20 @@ nav {
     padding: 1rem 0;
 }
 
-.nav-flex {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
+.nav-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to move to next line instead of pushing the screen width */
+    gap: 15px;
 }
+
+@media (max-width: 768px) {
+    /* Align everything to center for a balanced mobile look */
+    .nav-flex {
+        justify-content: center;
+        text-align: center;
+    }
 
 .logo { 
     color: #ffffff; 
@@ -49,12 +63,27 @@ nav {
 .logo span { color: var(--accent); }
 
 .brand-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1; /* Takes available space */
+    min-width: 250px; /* Prevents name from getting squashed */
+}
+
+.brand-group {
         align-items: center;
-    }
+        width: 100%;
+}
 
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    justify-content: center;
+    gap: 0.8rem; /* Tighter gap for mobile */
+    margin-top: 10px;
+    flex-wrap: wrap; /* Crucial: wraps tabs to a new line on small phones */
+}
 
-
-.nav-links { list-style: none; display: flex; gap: 1.5rem; }
 .nav-links a {
     text-decoration: none;
     color: #ffffff; /* 1) White when idle */
@@ -71,8 +100,11 @@ nav {
         flex-direction: row; 
         justify-content: center;
         width: 100%;
-        gap: 10px;
-}
+        gap: 8px;
+        order: -1; /* Moves socials to the very top on mobile */
+        margin-bottom: 10px;
+    }
+
 
 /* HERO STYLING */
 .hero { padding: 120px 0 80px; text-align: center; }
@@ -144,7 +176,11 @@ nav {
 .tag-orange { background: rgba(249, 115, 22, 0.2); color: #fb923c; }
 .tag-gray { background: rgba(148, 163, 184, 0.2); color: #94a3b8; }
 
-.btn-sm { background: var(--card); color: var(--text); padding: 8px 16px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.8rem; transition: 0.3s; }
+.btn-sm {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+}
+
 .btn-sm:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
 
 .link { color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.95rem; border-bottom: 2px solid transparent; transition: 0.3s; }
@@ -369,3 +405,69 @@ footer { padding: 80px 0; border-top: 1px solid var(--border); text-align: cente
     .edu-card, .award-card { flex-direction: column; text-align: center; }
     .card-logo-box, .award-icon { margin: 0 auto 15px; }
 }
+
+/* --- RESUME PAGE SPECIFIC STYLING --- */
+
+/* Professional Hero CTA */
+.header-cta {
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 14px 32px;
+    border-radius: 99px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Resume Viewer Layout */
+.resume-viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0 80px;
+}
+
+.resume-page {
+    width: 100%;
+    max-width: 850px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.resume-page img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ensure consistent nav active state */
+.nav-links a.active {
+    color: var(--accent) !important;
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+    .resume-viewer {
+        gap: 20px;
+    }
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
