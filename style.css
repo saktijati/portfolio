@@ -367,9 +367,17 @@ nav {
     .timeline-item { padding-left: 45px; }
     .timeline-header { flex-direction: column; align-items: flex-start; }
     
-    .edu-card { flex-direction: column; text-align: center; }
+    .edu-card { flex-direction: column; text-align: center; gap: 20px; }
+    .edu-info-main {
+        flex: auto;
+        width: 100%;
+        align-items: center; /* Centers text for mobile */
+        margin-right: 0;
+    }
     .edu-content-group { flex: auto; width: 100%; margin: 20px 0; align-items: center; }
-    .edu-content-group .edu-year { text-align: center; }
+    .edu-info-main .edu-year {
+        text-align: center;
+    }
 
     .card-logo-box { margin: 0 auto; }
     .award-card { flex-direction: column; text-align: center; }
