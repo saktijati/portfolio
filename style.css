@@ -225,8 +225,8 @@ nav {
 .awards-grid{
     display: flex;
     flex-direction: column; /* Keeps the 3 awards stacked in rows */
-    gap: 20px;
-    max-width: 1000px; /* Adjusted for better horizontal spread */
+    gap: 25px;
+    max-width: 1100px; /* Adjusted for better horizontal spread */
     margin: 40px auto 100px;
 }
 
@@ -237,7 +237,7 @@ nav {
     padding: 32px;
     display: flex;
     align-items: center; /* Vertically centers the logo and year with the text */
-    gap: 25px;
+    gap: 30px;
     transition: transform 0.3s ease;
 }
 
@@ -282,10 +282,11 @@ nav {
 }
 
 .edu-card:hover, .award-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
 .card-logo-box {
     width: 85px;
     height: 85px;
-    background: #1e293b;
+    background: #ffffff;
     border: 1px solid var(--border);
     border-radius: 12px; /* Your preferred rounding level */
     display: flex;
