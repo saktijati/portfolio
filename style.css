@@ -233,9 +233,9 @@ nav {
     border-radius: 24px;
     padding: 32px;
     display: flex;
+    flex-direction: row;
     align-items: center; /* Vertically centers the logo and year with the text */
-    gap: 30px;
-    transition: transform 0.3s ease;
+    gap: 40px;
 }
 
 .award-card {
@@ -307,11 +307,11 @@ nav {
 }
 
 .edu-info-main {
-    flex: 0 0 320px;       /* Locks the pillar width for alignment */
+    flex: 0 0 320px; 
     display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    gap: 4px;              /* Consistent spacing between title, school, and year */
-    margin-right: 40px;    /* Gap before the coursework starts */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
 }
 
 .edu-info-main .edu-year {
@@ -319,7 +319,7 @@ nav {
     font-size: 0.8rem;
     font-weight: 700;
     color: var(--accent);
-    margin: 0;          /* Resets any old margins */
+    margin: 0;
 }
 
 .coursework {
