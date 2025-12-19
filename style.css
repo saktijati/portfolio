@@ -231,7 +231,7 @@ nav {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 24px;
-    gap: 20px;
+    gap: 40px;
     padding: 32px;
     display: flex;
     flex-direction: row;
@@ -269,7 +269,6 @@ nav {
 
 /* Column 3: The Description */
 .award-description {
-    flex: 1;
     color: var(--muted);
     font-size: 0.95rem;
     line-height: 1.5;
@@ -400,8 +399,21 @@ nav {
     .edu-info-main .edu-year {text-align: center; }
 
     .card-logo-box { margin: 0 auto; }
-    .award-card { flex-direction: column; text-align: center; }
-    .award-icon { margin: 0 auto 15px; }
+    .award-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .award-info-main {
+        flex: auto;
+        width: 100%;
+        align-items: center; /* Centered for mobile */
+    }
+
+    .award-info-main .date-badge {
+        text-align: center;
+    }
     
     .btn-primary { width: 100%; text-align: center; }
     .hero h1 { font-size: 2.2rem; }
