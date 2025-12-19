@@ -231,6 +231,7 @@ nav {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 24px;
+    gap: 20px;
     padding: 32px;
     display: flex;
     flex-direction: row;
@@ -238,43 +239,41 @@ nav {
 }
 
 .award-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 32px;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 24px;
-    padding: 32px;
-    display: flex;
-    align-items: center; /* Vertically centers the icon with the text columns */
-    gap: 30px;
-    transition: transform 0.3s ease;
+    gap: 20px; /* Locked gap between columns */
+    transition: 0.3s ease;
 }
 
 /* Column 1: The Title */
 .award-card h3 {
-    width: 250px; /* Fixed width ensures column alignment */
     font-size: 1.2rem;
     color: var(--text);
-    margin-bottom: 0; /* Removed margin to keep center alignment */
-    flex-shrink: 0;
+    margin: 0;
 }
 
-/* Column 2: The Date */
-.date-badge {
-    width: 100px; /* Fixed width ensures column alignment */
+.award-info-main .date-badge {
+    text-align: left;
+    width: auto;
     font-size: 0.75rem;
     font-weight: 800;
     color: var(--accent);
     text-transform: uppercase;
-    text-align: center;
-    flex-shrink: 0;
-    margin-bottom: 0; /* Removed margin to keep center alignment */
+    margin: 0;
 }
 
 /* Column 3: The Description */
-.award-card p {
+.award-description {
+    flex: 1;
     color: var(--muted);
     font-size: 0.95rem;
     line-height: 1.5;
-    flex-grow: 1; /* Takes up the remaining space */
+    margin: 0;
 }
 
 .edu-card:hover, .award-card:hover { transform: translateY(-5px); border-color: var(--accent); }
@@ -291,7 +290,31 @@ nav {
     flex-shrink: 0;
     padding: 8px;
 }
-.award-icon { width: 80px; height: 80px; background: #1e293b; border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.award-icon-box {
+    flex: 0 0 85px;
+    height: 85px;
+    background: #ffffff; /* White tile look */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.award-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.award-info-main {
+    flex: 0 0 320px; /* Locked width to match Education */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-aligned content */
+    gap: 4px;
+}
 
 .school-logo {
     max-width: 100%;
