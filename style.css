@@ -235,7 +235,6 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center; /* Vertically centers the logo and year with the text */
-    gap: 40px;
 }
 
 .award-card {
@@ -285,7 +284,7 @@ nav {
     height: 85px;
     background: #ffffff;
     border: 1px solid var(--border);
-    border-radius: 12px; /* Your preferred rounding level */
+    border-radius: 12px; /* Rounding level */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -368,7 +367,7 @@ nav {
     .timeline-header { flex-direction: column; align-items: flex-start; }
     
     .edu-card { flex-direction: column; text-align: center; }
-    .edu-info-main {
+    .edu-info-main .edu-year {
         flex: auto;
         width: 100%;
         align-items: center; /* Centers text for mobile */
