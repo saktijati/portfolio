@@ -301,35 +301,37 @@ nav {
 }
 
 .edu-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--text);
-    margin-bottom: 4px;
-    line-height: 1.3;
+    margin-bottom: 2px;
 }
 
-edu-info-main {
-    flex: 0 0 250px; /* LOCKS this to the same 250px width as your Awards */
-    margin-right: 20px;
+.edu-info-main {
+    flex: 0 0 320px;       /* Locks the pillar width for alignment */
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    gap: 4px;              /* Consistent spacing between title, school, and year */
+    margin-right: 40px;    /* Gap before the coursework starts */
 }
 
-.edu-year {
-    flex: 0 0 100px; /* LOCKS this to the same 100px width as your Awards */
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: var(--accent);
+.edu-info-main .edu-year {
+    width: auto;           /* Removes the old 100px fixed width */
+    text-align: left;      /* Aligns with the school name above it */
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);  /* Uses your blue accent to distinguish the date */
     text-transform: uppercase;
-    text-align: center;
-    margin-right: 30px;
-    flex-shrink: 0;
+    letter-spacing: 0.5px;
+    margin: 0;             /* Resets any old margins */
 }
 
 .coursework {
-    flex: 1; /* This is what allows the text to fill the rest of the row */
+    flex: 1;               /* Occupies all remaining horizontal space */
     color: var(--muted);
     font-size: 0.95rem;
     line-height: 1.5;
-    padding-left: 20px; /* Space where the line used to be */
-    border-left: none;  /* ENSURES the line is gone */
+    padding-left: 0;       /* Removes old padding since line is gone */
+    border-left: none;     /* Confirms no vertical line */
 }
 
 .coursework strong {
@@ -338,7 +340,11 @@ edu-info-main {
 
 .award-icon { font-size: 2rem; background: rgba(59, 130, 246, 0.1); border: 1px solid var(--accent); }
 .edu-card h3, .award-card h3 { font-size: 1.3rem; margin-bottom: 5px; color: var(--text); }
-.institution { color: var(--accent); font-weight: 700; font-size: 0.85rem; }
+.institution {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
 .award-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
 .date-badge { display: inline-block; font-size: 0.75rem; font-weight: 800; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; }
 
