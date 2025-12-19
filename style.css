@@ -83,8 +83,6 @@ nav {
     width: 18px;            /* Size of the actual icon inside the box */
     height: 18px;           /* Size of the actual icon inside the box */
     display: block;
-    /* We remove the invert filter because the box is white, 
-       so the icons should stay dark/original colors */
     filter: none; 
 }
 
@@ -93,7 +91,6 @@ nav {
     background-color: var(--accent); /* Optional: Box turns blue on hover */
 }
 
-/* If your icons are white SVGs, use this to make them dark against the white box */
 .nav-socials a img {
     filter: brightness(0); 
 }
@@ -192,7 +189,7 @@ nav {
 .link { color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.95rem; border-bottom: 2px solid transparent; transition: 0.3s; }
 .link:hover { border-bottom-color: var(--accent); }
 
-/* --- EXPERIENCE & TIMELINE --- */
+/* --- EXPERIENCE --- */
 .timeline { position: relative; max-width: 900px; margin: 60px auto 100px; padding: 0 20px; }
 .timeline::before { content: ''; position: absolute; left: 31px; top: 0; bottom: 0; width: 2px; background: var(--border); }
 .timeline-item { position: relative; margin-bottom: 40px; padding-left: 60px; }
@@ -224,7 +221,7 @@ nav {
 }
 .awards-grid{
     display: flex;
-    flex-direction: column; /* Keeps the 3 awards stacked in rows */
+    flex-direction: column; /* Stacks the 3 awards vertically */
     gap: 25px;
     max-width: 1100px; /* Adjusted for better horizontal spread */
     margin: 40px auto 100px;
@@ -296,6 +293,7 @@ nav {
     padding: 8px;
 }
 .award-icon { width: 80px; height: 80px; background: #1e293b; border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
 .school-logo {
     max-width: 100%;
     max-height: 100%;
@@ -313,10 +311,11 @@ nav {
     width: 100px; /* Fixed width for alignment */
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--muted);
+    color: var(--accent);
     text-transform: uppercase;
     text-align: center;
     flex-shrink: 0;
+    margin-bottom: 0;
 }
 
 .coursework {
@@ -325,15 +324,11 @@ nav {
     font-size: 0.9rem;
     line-height: 1.5;
     padding-left: 20px;
-    border-left: 1px solid var(--border);
+    border-left: none;
 }
 
 .coursework strong {
-    color: var(--text);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 5px;
+    display: none;
 }
 
 .award-icon { font-size: 2rem; background: rgba(59, 130, 246, 0.1); border: 1px solid var(--accent); }
