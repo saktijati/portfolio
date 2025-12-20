@@ -1,2 +1,2 @@
 # Portfolio
-Go to [saktijati.github.io](github.com/saktijati/saktijati.github.io)
+Go to [saktijati.github.io](https://saktijati.github.io)
